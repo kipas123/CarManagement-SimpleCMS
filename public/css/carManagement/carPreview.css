@@ -1,0 +1,1254 @@
+/*-----------------------------------------------------------*/
+/*WARTOSCI WSPÓLNE*/
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    width: 100vw;
+    color: rgb(38,38,38);
+}
+p, h1, h2 {
+    margin: 0;
+    padding:0;
+}
+.srodkuj {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3% 0;
+}
+.dzial_naglowek {
+    text-align:center;
+    font-size: 2.5em;
+}
+.dzial_opis {
+    margin-bottom: 5%;
+    text-align:center;
+    font-size: 15px;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/*-----------------------------------------------------------*/
+/*MENU*/
+@media(min-width:320px) and (max-width:1024px){
+    /*------------------------------------------------------*/
+    /*MENU*/
+    #kon_menu {
+        position: fixed;
+        left: 5%;
+        width: 90%;
+        margin: 0 auto;
+        top: 10px;
+        height: 35vh;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+        transition: .2s;
+        z-index: 4;
+    }
+    #kon_menu.off {
+        top: -45vh;
+    }
+    ul.linki_menu {
+        width: 100%;
+        padding: 0;
+        list-style-type: none;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    ul.linki_menu li {
+        box-sizing: border-box;
+        flex-basis: 100%;
+        width: 100%;
+        height: 35px;
+        margin-top: 2%;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+    .linki_menu>li>a {
+        color: black;
+        text-decoration: none;
+        border-bottom: 1px solid black;
+    }
+    .pokaz_menu {
+        display: none;
+        padding: 15px;
+        background: rgb(0, 0, 0);
+        text-align:center;
+        color: rgb(245,245,245);
+        cursor: pointer;
+    }
+    #przycisk_menu {
+        position:fixed;
+        font-size: 30px;
+        top: 4%;
+        right: 6%;
+        z-index: 5;
+    }
+    #przycisk_menu i.off {
+            display: none;   
+    }
+    i.fa-angle-up {
+        color: rgb(49, 49, 49);
+    }
+}
+@media(min-width: 1024px) {
+    #kon_menu {
+        width: 100%;
+        height: 30px;
+        position: fixed;
+        display: inline-block;
+        padding: 15px 0;
+        background: rgb(243, 243, 243);
+        box-shadow: 0 0 7px rgb(10,10,10);
+        z-index: 1;
+    }
+    .linki_menu {
+        width: 1250px;
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+    .linki_menu li {
+        box-sizing: border-box;
+        width: 250px;
+        float: left;
+        text-align: center;
+    }
+    .linki_menu li  a {
+        text-decoration: none;
+        color: rgb(38,38,38);
+        font-size: 1.2em;
+        border-bottom: 1px solid black;
+        transition: 0.1s;
+        line-height: 100%;
+    }
+    .linki_menu li  a .fas {
+        padding-right: 5px;
+        color: rgb(38,38,38);
+    }
+    .linki_menu li a:hover {
+        font-size: 1.4em;
+        color: rgb(185, 29, 29);
+        border-bottom: 1px solid rgb(185, 29, 29);
+    }
+    .pokaz_menu {
+        display: none;
+    }
+}
+/*----------------------------------------------------------*/
+/*Top STRONY*/
+@media (min-width: 320px) and (max-width:450px) {
+    #top_strony {
+        float: left;
+        top:0;
+        height: 100vh;
+        background: url('../images/DAWID/komisTOP.JPG') no-repeat center;
+        background-size: cover;
+    }
+    #top_strony>div.bgc {
+        width: 100%;
+        height: 28vh;
+        background-color: rgba(0,0,0,0.5);
+    }
+    #top_strony h1 {
+        margin-top: 25%;
+        font-size: 2em;
+        text-align: center;
+        color: rgb(219, 219, 219);
+    }
+    #top_strony h2 {
+        font-size: 1.5em;
+        line-height: 30px;
+        text-align: center;
+        color: rgb(219, 219, 219);
+        text-decoration: uppercase;
+    }
+    #top_strony p{        
+        margin-top: 10vh;
+        text-align: center;
+        margin-left: -5vw;
+        line-height: 100%;
+    }
+    #top_strony .bgc p+p{          
+        margin: 10vh auto; 
+        text-align: center;
+    }
+    #top_strony p a{
+        padding: 15px 50px;
+    }
+    #top_strony div.click {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width:100vw;
+        height:110px;
+        margin-left: auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #top_strony div.click ul.linki li {
+        width: 20vw;
+        float: left;
+        list-style: none;
+        line-height: 110px;
+        font-size: 2.3em;
+        line-height: 100%;
+    } 
+    #top_strony div.click ul.linki .fab, .fas {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 1.4em;
+        line-height: 100%;
+        margin-right: 10px;
+        transition: 0.2s;
+    }
+    #top_strony p a{
+        padding: 15px 40px;
+        margin: 0 0 0 20px;
+        background: rgb(245,245,245);
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+    #top_strony p+p a{
+        padding: 20px 70px;
+        margin: 0 5px 0 9px;
+        background: rgb(245,245,245);
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+}
+@media (min-width:451px) and (max-width:767px) {
+    #top_strony {
+        float: left;
+        top:0;
+        width: 100vw;
+        height: 100vh;
+        background: url('../images/DAWID/komisTOP.JPG') ;
+        background-position: 60% 70%;
+    }
+    #top_strony>div.bgc {
+        width: 100%;
+        height: 15vh;
+        background-color: rgba(0,0,0,0.5);
+    }
+    #top_strony h1 {
+        margin-top: 25%;
+        font-size: 2em;
+        text-align: center;
+        color: rgb(219, 219, 219);
+    }
+    #top_strony h2 {
+        font-size: 1.5em;
+        line-height: 30px;
+        text-align: center;
+        color: rgb(219, 219, 219);
+        text-decoration: uppercase;
+    }
+    #top_strony p{        
+        margin-top: 10vh;
+        text-align: center;
+        margin-left: -5vw;
+        line-height: 100%;
+    }
+    #top_strony .bgc p+p{          
+        margin: 10vh auto; 
+        text-align: center;
+    }
+    #top_strony p a{
+        padding: 15px 50px;
+    }
+    #top_strony div.click {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width:100vw;
+        height:110px;
+        margin-left: auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #top_strony div.click ul.linki li {
+        width: 20vw;
+        float: left;
+        list-style: none;
+        line-height: 110px;
+        font-size: 2.3em;
+        line-height: 100%;
+    } 
+    #top_strony div.click ul.linki .fab, .fas {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 1.4em;
+        line-height: 100%;
+        margin-right: 10px;
+        transition: 0.2s;
+    }
+    #top_strony p a{
+        padding: 15px 40px;
+        margin: 0 0 0 20px;
+        background: rgb(245,245,245);
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+    #top_strony p+p a{
+        padding: 20px 70px;
+        margin: 0 5px 0 9px;
+        background: rgb(245,245,245);
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.5s;
+    } 
+}
+@media (min-width:768px) and (max-width:1023px) {
+    #top_strony {
+        float: left;
+        top:0;
+        width: 100vw;
+        height: 100vh;
+        background: url('../images/DAWID/komisTOP.JPG') ;
+        background-position: 60% 70%;
+    }
+    #top_strony>div.bgc {
+        width: 100%;
+        height: 15vh;
+        background-color: rgba(0,0,0,0.5);
+    }
+    #top_strony h1 {
+        margin-top: 25%;
+        font-size: 3em;
+        text-align: center;
+        color: rgb(219, 219, 219);
+    }
+    #top_strony h2 {
+        font-size: 2em;
+        line-height: 30px;
+        text-align: center;
+        color: rgb(219, 219, 219);
+        text-decoration: uppercase;
+    }
+    #top_strony p{        
+        margin-top: 10vh;
+        text-align: center;
+        margin-left: -5vw;
+        line-height: 100%;
+    }
+    #top_strony .bgc p+p{          
+        margin: 10vh auto; 
+        text-align: center;
+    }
+    #top_strony p a{
+        padding: 15px 50px;
+    }
+    #top_strony div.click {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        width:100vw;
+        height:110px;
+        margin-left: auto;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #top_strony div.click ul.linki li {
+        width: 23vw;
+        float: left;
+        list-style: none;
+        line-height: 110px;
+        font-size: 2.3em;
+        line-height: 100%;
+    } 
+    #top_strony div.click ul.linki .fab, .fas {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 1.4em;
+        line-height: 100%;
+        margin-right: 10px;
+        transition: 0.2s;
+    }
+    #top_strony p a{
+        padding: 15px 40px;
+        margin: 0 0 0 20px;
+        background: rgb(245,245,245);
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+    #top_strony p+p a{
+        padding: 20px 70px;
+        margin: 0 5px 0 9px;
+        background: rgb(245,245,245);
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.5s;
+    } 
+}
+@media(min-width: 1024px) {
+    #top_strony {
+        width: 100vw;
+        height: 100vh;
+        background: url(../images/fotka_komis1.jpg) no-repeat center;
+        background-position-y: -380px;
+        background-size: cover;
+        text-align: center;
+        color: rgb(245,245,245);
+        overflow: auto;
+    }
+    #top_strony div.bgc {
+        width: 100%;
+        height: 120px;
+        background-color: rgba(0,0,0,0.5);
+    }
+    #top_strony div.click {
+        position: fixed;
+        bottom: 20px;
+        left: 10px;
+        width:300px;
+        height:110px;
+        margin-left: 0;
+        box-sizing: border-box;
+        text-align: left;
+    }
+    #top_strony div.click ul.linki li {
+        width: 65px;
+        float: left;
+        list-style: none;
+        line-height: 110px;
+        font-size: 1.8em;
+        line-height: 100%;
+    } 
+    #top_strony div.click ul.linki .fab, .fas {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 1.4em;
+        line-height: 100%;
+        margin-right: 10px;
+        transition: 0.2s;
+    }
+    #top_strony div.click>ul.linki .fab:hover { 
+        text-decoration: none;
+        color: rgb(231, 38, 38);
+        font-size: 2em;
+        line-height: 100%;
+        margin-right: 10px;
+    }
+    #top_strony div.click>ul.linki .fas:hover { 
+        text-decoration: none;
+        color: rgb(231, 38, 38);
+        font-size: 2em;
+        line-height: 100%;
+        margin-right: 10px;
+    }
+    #top_strony h1 {
+        margin-top: 15%;
+        font-size: 3.5em;
+        text-decoration: uppercase;
+        font-weight: normal;
+        text-shadow: 0 0 3px rgb(10,10,10)
+    }
+    #top_strony h2 {
+        line-height: 0;
+        font-size: 2em;
+        font-weight: normal;
+        text-shadow: 0 0 3px rgb(10,10,10)
+    }
+    #top_strony p{
+        box-sizing: border-box;
+        width: 48vw;
+        margin: 15% auto 0 auto;
+        float: left;
+    }
+    #top_strony p a{
+        padding: 30px 80px;
+        background: rgb(245,245,245);
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    #top_strony p a:hover{
+        background: rgb(27, 27, 27);
+        color: rgb(211, 209, 209);
+        
+    }
+}
+/*----------------------------------------------------------*/
+/*OFERTA*/
+@media (min-width: 320px) and (max-width:450px){
+    .boks_oferta {
+        width: 98%;
+        height: auto;
+        float:none;
+        overflow: hidden;
+        margin-right: 0;
+        margin-bottom: 2vh;
+        text-align: center;
+        border: 2px solid black;
+        box-shadow: 2px 1px 2px 2px grey;
+    }
+    .boks_oferta ul {
+        padding-left: 0;
+        height: auto;
+        list-style: none;
+    }
+    .boks_oferta div>a>img {
+        width: 80%;
+        max-width: 200px;
+        max-height: 120px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .cena_oferta {
+        font-size: 20px;
+    }
+    div.odnosniki>p.odnosnik{
+        box-sizing: inline-block;
+        width: 100%;
+        margin: 30px auto;
+        text-align: center;
+    }
+    div.odnosniki>h1{
+        text-align: center;
+    }
+    div.odnosniki>p.odnosnik1{
+        box-sizing: inline-block;
+        width: 100%;
+        margin: 30px auto;
+        text-align: center;
+    }
+    .odnosniki p.odnosnik a{
+        padding: 10px 15px;
+        background: rgb(153, 153, 153);
+        border: 1px solid black;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .odnosniki p.odnosnik1 a{
+        padding: 10px 15px;
+        background: rgb(0, 0, 0);
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px 1px black;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .zobacz_wiecej {
+        display: none;
+    }
+}
+@media (min-width:451px) and (max-width:767px) {
+    .boks_oferta {
+        width: 98%;
+        height: auto;
+        float:none;
+        margin-right: 0;
+        margin-bottom: 2vh;
+        text-align: center;
+        border: 2px solid black;
+        box-shadow: 2px 1px 2px 2px grey;
+    }
+    .boks_oferta ul {
+        padding-left: 0;
+        height: auto;
+        list-style: none;
+    }
+    .boks_oferta div>a>img {
+        width: 60%;
+        max-width: 240px;
+        max-height: 150px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .cena_oferta {
+        font-size: 20px;
+    }
+    div.odnosniki>p.odnosnik {
+        box-sizing: inline-block;
+        width: 100%;
+        margin: 30px auto;
+        text-align: center;
+    }
+    div.odnosniki>p.odnosnik1 {
+        box-sizing: inline-block;
+        width: 100%;
+        margin: 30px auto;
+        text-align: center;
+    }
+    .odnosniki h1 {
+        text-align: center;
+    }
+    .odnosniki p.odnosnik a{
+        padding: 10px 15px;
+        background: rgb(153, 153, 153);
+        border: 1px solid black;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .odnosniki p.odnosnik1 a{
+        padding: 10px 15px;
+        background: rgb(0, 0, 0);
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px 1px black;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .zobacz_wiecej {
+        display: none;
+    }
+}
+@media (min-width:768px) and (max-width:1023px) {
+    .boks_oferta {
+        width: 48%;
+        height: auto;
+        float: left;
+        margin: 0 5px;
+        margin-bottom: 2vh;
+        text-align: center;
+        border: 2px solid black;
+        box-shadow: 2px 1px 2px 2px grey;
+    }
+    .boks_oferta ul {
+        padding-left: 0;
+        height: auto;
+        list-style: none;
+    }
+    .boks_oferta div>a>img {
+        width: 60%;
+        max-width: 220px;
+        max-height: 130px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .cena_oferta {
+        font-size: 20px;
+    }
+    div.odnosniki>p.odnosnik {
+        box-sizing: inline-block;
+        width: 100%;
+        margin: 30px auto;
+        text-align: center;
+    }
+    div.odnosniki>p.odnosnik1 {
+        box-sizing: inline-block;
+        width: 100%;
+        margin: 30px auto;
+        text-align: center;
+    }
+    div.odnosniki h1 {
+        text-align: center;
+    }
+    .odnosniki p.odnosnik a{
+        padding: 10px 15px;
+        background: rgb(153, 153, 153);
+        border: 1px solid black;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .odnosniki p.odnosnik1 a{
+        padding: 10px 15px;
+        background: rgb(0, 0, 0);
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px 1px black;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .zobacz_wiecej {
+        display: none;
+    }
+}
+@media (min-width: 1024px) {
+    #kon_oferta {
+        width: 100%;
+        height: 100%;
+        background: rgb(245,245,245);
+        overflow: auto;
+    }
+    #kon_oferta .dzial_opis {
+        font-size: 24px;
+        margin-bottom: 0;
+
+    }
+    .boks_oferta .oferty {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .boks_oferta p {
+        font-size: 20px;
+        text-align: center; 
+        margin-bottom: 10px;
+    }
+    .boks_oferta div>a>img {
+        width: 100%;
+        max-height: 140px;
+    }
+    .boks_oferta {
+        width: 18%;
+        height: 390px;
+        float: left;
+        margin-right: 2.3%;
+        margin-top: 6%;
+        margin-bottom: 1%;
+        padding: 2.5%;
+        background: rgb(250,250,250);
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 5px;
+        text-align: center;
+    }
+    .boks_oferta:hover {
+        box-shadow: 0 0 9px rgb(0, 0, 0);
+    }
+    .boks_oferta:last-child {
+        margin-right: 0;
+    }
+    .boks_vip {
+        background: rgb(66, 66, 66);
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 5px;
+        color: rgb(245,245,245);
+        text-align: center;
+    }
+    .boks_vip:hover {
+        box-shadow: 0 0 7px rgb(0, 0, 0);
+    }
+    .czas_oferty {
+        margin-bottom: 6%;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    .boks_oferta ul {
+        height: 110px;
+        margin: 10px 0;
+        padding: 0px;
+        list-style: none;
+        font-size: .9em;
+    }
+    .boks_oferta ul {
+        padding: 3px 0;
+    }
+    .cena_oferta {
+        text-align:center;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    div.odnosniki {
+        max-width: 1200px;
+        margin:auto;
+        text-align: center;
+    }
+    div.odnosniki>p.odnosnik {
+        display: block;
+        box-sizing: border-box;
+        width: 30%;
+        float:left;
+        margin: 50px 10% 0;
+        text-align: center;
+    }
+    div.odnosniki>p.odnosnik1 {
+        display: block;
+        box-sizing: border-box;
+        width: 30%;
+        margin: 6% auto;
+        text-align: center;
+    }
+    .odnosniki p.odnosnik a, p.odnosnik1 a{
+        padding: 30px 80px;
+        background: rgb(153, 153, 153);
+        border: 1px solid black;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+    .odnosniki p.odnosnik a:hover, p.odnosnik1 a:hover{
+        background: rgb(27, 27, 27);
+        color: rgb(211, 209, 209);   
+    }
+    .zobacz_wiecej .boks_oferta:nth-child(4n){
+        margin-right: 0;
+    }
+}
+/*----------------------------------------------------------*/
+/*Nasza Firma*/
+@media (min-width: 320px) and (max-width:450px){
+    .komis_about, .komis_opis {
+        width: 96%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 3%;
+        text-align: center;
+    }
+    .img_opis {
+        display: block;
+        width: 80%;
+        padding-bottom: 10px;
+        float: none;
+        margin: 0 auto;
+    }
+    #kon_opis h1 {
+        background-color: rgb(199, 199, 199);
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px 1px black;
+    }
+}
+@media (min-width:451px) and (max-width:767px) {
+    .komis_about, .komis_opis {
+        width: 96%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 3%;
+        text-align: center;
+    }
+    .img_opis {
+        display: block;
+        width: 80%;
+        padding-bottom: 10px;
+        float: none;
+        margin: 0 auto;
+    }
+    #kon_opis h1 {
+        background-color: rgb(199, 199, 199);
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px 1px black;
+    }
+}
+@media (min-width:768px) and (max-width:1023px) {
+    #kon_opis {
+        width: 100%;
+        padding-bottom: 5%;
+        background: url(../images/DAWID/komis_1\ \(3\).jpeg) no-repeat center;
+        background-size: cover;
+        overflow: auto;
+    }
+    #kon_opis .dzial_naglowek {
+        color: rgb(240, 234, 234);
+        text-shadow: 0 0 3px rgb(10,10,10);
+        margin-bottom: 15px;
+        font-size: 55px;
+    }
+    #kon_opis h2 {
+        margin-bottom: 15px;
+        font-weight: normal;
+    }
+    .komis_about {
+        width: 40%;
+        float: left;
+        margin-right: 5%;
+        padding: 2%;
+        background: rgb(255,255,255);
+        border-radius: 10px;
+        
+    }
+    .komis_about p {
+        margin-bottom: 10px;
+    }
+    .komis_opis {
+        width: 45%;
+        float: left;
+        padding: 2%;
+        background: rgb(255,255,255);
+        border-radius: 10px;
+    }
+    .komis_opis article{
+        margin-bottom: 40px;
+    }
+    .img_opis {
+        width: 35%;
+        float: left;
+        max-width: 398px;
+        margin-right: 15px;
+    }
+}
+@media (min-width: 1024px) {
+    #kon_opis {
+        width: 100%;
+        padding-bottom: 5%;
+        background: url(../images/DAWID/komis_1\ \(3\).jpeg) no-repeat center;
+        background-size: cover;
+        overflow: auto;
+    }
+    #kon_opis .dzial_naglowek {
+        color: rgb(240, 234, 234);
+        text-shadow: 0 0 3px rgb(10,10,10);
+        margin-bottom: 15px;
+        font-size: 55px;
+    }
+    #kon_opis h2 {
+        margin-bottom: 15px;
+        font-weight: normal;
+    }
+    .komis_about {
+        width: 31%;
+        float: left;
+        margin-right: 5%;
+        padding: 2%;
+        background: rgb(255,255,255);
+        border-radius: 10px;
+        
+    }
+    .komis_about p {
+        margin-bottom: 10px;
+    }
+    .komis_opis {
+        width: 56%;
+        float: left;
+        padding: 2%;
+        background: rgb(255,255,255);
+        border-radius: 10px;
+    }
+    .komis_opis article{
+        margin-bottom: 40px;
+    }
+    .img_opis {
+        width: 35%;
+        float: left;
+        max-width: 398px;
+        margin-right: 15px;
+    }
+}
+/*-----------------------------------------------------------*/
+/*KONTAKT-FORMULARZ*/
+@media (min-width: 320px) and (max-width:450px){
+    .okienko_formularz h3 {
+        text-align: center;
+    }
+    .okienko_formularz>div.srodkuj>p.dzial_opis {
+        text-align: center;
+    }
+    .okienko_formularz input {
+        width: 93%;
+        padding: 3%;
+        margin-right: 0%;
+        margin-bottom: 3%;
+    }
+    .okienko_formularz textarea {
+        width: 93%;
+        padding: 3%;
+    }
+    .wyslij_ankiete {
+        height: 40px;
+        width: 150px;
+        font-size: 18px;
+        margin-top: 3%;
+    } 
+} 
+@media (min-width:451px) and (max-width:767px) {
+    .okienko_formularz h3 {
+        text-align: center;
+    }
+    .okienko_formularz>div.srodkuj>p.dzial_opis {
+        text-align: center;
+    }
+    .okienko_formularz input {
+        width: 93%;
+        padding: 3%;
+        margin-right: 0%;
+        margin-bottom: 3%;
+    }
+    .okienko_formularz textarea {
+        width: 93%;
+        height: 15vh;
+        padding: 3%;
+    }
+    .wyslij_ankiete {
+        height: 40px;
+        width: 150px;
+        font-size: 18px;
+        margin-top: 3%;
+    } 
+}
+@media (min-width:768px) and (max-width:1023px) {
+    #kon_kontakt {
+        width: 100%;
+        padding-bottom: 2%;
+        background: rgb(245,245,245);
+        overflow: auto;
+    }
+    .okienko_formularz {
+        width: 97.7%;
+        padding: 1%;
+        background: rgb(192, 192, 192);
+        border-radius: 5px;
+        border: 1px solid rgb(200,200,200);
+    }
+    .okienko_formularz h3 {
+        margin-bottom: 15px;
+        font-size: 1.2em;
+        text-decoration: uppercase;
+    }
+    .okienko_formularz input {
+        width: 46%;
+        padding: 1%;
+        margin-right: 1%;
+        margin-bottom: 1%;
+        border: 1px solid rgb(220,220,220);
+        border-radius: 5px;
+        font-size: 1em;
+    }
+    .okienko_formularz input:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .okienko_formularz input:focus {
+        outline: none;
+        border: 1px solid rgb(0, 0, 0);
+    }
+    .okienko_formularz textarea {
+        width: 96%;
+        height: 130px;
+        padding: 1%;
+        border: 1px solid rgb(220,220,220);
+        border-radius: 5px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1em;
+        resize: none;
+    }
+    .okienko_formularz textarea:focus {
+        outline: none;
+        border: 1px solid rgb(0, 0, 0);
+    }
+    .wyslij_ankiete {
+        margin-top: 1%;
+        width: 180px;
+        font-size: 22px;
+        padding: 15px 30px;
+        margin: 5px auto;
+        background: rgb(161, 161, 161);
+        border: 1px solid rgb(83,62,26);
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+}
+@media (min-width:1024px) {
+    #kon_kontakt {
+        width: 100%;
+        padding-bottom: 2%;
+        background: rgb(245,245,245);
+        overflow: auto;
+    }
+    .okienko_formularz {
+        width: 97.7%;
+        padding: 1%;
+        background: rgb(192, 192, 192);
+        border-radius: 5px;
+        border: 1px solid rgb(200,200,200);
+    }
+    .okienko_formularz h3 {
+        margin-bottom: 15px;
+        font-size: 1.2em;
+        text-decoration: uppercase;
+    }
+    .okienko_formularz input {
+        width: 47%;
+        padding: 1%;
+        margin-bottom: 1%;
+        border: 1px solid rgb(220,220,220);
+        border-radius: 5px;
+        font-size: 1em;
+    }
+    .okienko_formularz input:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .okienko_formularz input:focus {
+        outline: none;
+        border: 1px solid rgb(0, 0, 0);
+    }
+    .okienko_formularz textarea {
+        width: 97.5%;
+        height: 130px;
+        padding: 1%;
+        border: 1px solid rgb(220,220,220);
+        border-radius: 5px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1em;
+        resize: none;
+    }
+    .okienko_formularz textarea:focus {
+        outline: none;
+        border: 1px solid rgb(0, 0, 0);
+    }
+    .wyslij_ankiete {
+        margin-top: 1%;
+        width: 180px;
+        font-size: 22px;
+        padding: 15px 30px;
+        margin: 5px auto;
+        background: rgb(161, 161, 161);
+        border: 1px solid rgb(83,62,26);
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .wyslij_ankiete:hover {
+        background: rgb(44, 44, 44);
+        color: rgb(161, 161, 161);
+        border: 1px solid rgb(56,40,14);
+    }
+}
+/*-----------------------------------------------------------*/
+/* KONTAKT-BEZPOŚREDNI*/
+.contact {
+    background-color: #000;
+    padding: 30px 20px;
+}
+.contact h1 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+}
+.contact .wrap {
+    padding-top: 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.contact input, .contact button, .contact textarea {
+    width: 100%;
+    margin-bottom: 25px;
+    font-family: 'Saira', sans-serif;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 7px;
+}
+.contact input {
+    width: 95%;
+    height: 36px;
+}
+.contact textarea {
+    width: 95%;
+    height: 120px;
+}
+.contact button {
+    font-size: 14px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+.contact .socials {
+    padding-top: 30px;
+    font-size: 0;
+}
+.contact .social {
+    word-spacing: 3px;
+    padding-top: 10px;
+    color: white;
+    font-family: 'Saira Condensed', sans-serif;
+}
+.contact .social img {
+    float: left;
+    max-width: 72px;
+    max-height: 72px;
+    border-radius: 50%;
+}
+.contact .social span {
+    line-height: 72px;
+    width: 120px;
+    margin: 2px;
+    padding-left: 15px;
+    float: left;
+    font-size: 20px;
+}
+.contact .social address {
+    line-height: 35px;
+    width: 120px;
+    margin: 2px;
+    padding-left: 15px;
+    float: left;
+    font-size: 20px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+.contact .social a {
+    color:white;
+}
+@media (min-width: 533px) {
+    .contact .social {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+@media (min-width: 1024px) {
+    .contact h1 {
+        font-size: 60px;
+        padding: 30px 0;
+    }
+    .contact form, .contact .socials {
+        float: left;
+        width: 45%;
+        padding: 0 20px;
+    }
+    .contact .social {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+    }
+    .contact input, .contact button, .contact textarea {
+        margin-bottom: 35px;
+    }
+    .contact input {
+        height: 46px;
+        font-size: 24px;
+    }
+    
+    .contact textarea {
+        font-size: 24px;
+        height: 180px;
+    }
+    
+    .contact button {
+        font-size: 20px;
+        height: 50px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .contact button:hover {
+        color:black;
+        background-color: white;
+    }
+}
+/*----------------------------------------------------------*/
+/*STOPKA GOTOWE*/
+#kon_stopka {
+    background-color: #1a607e;
+    color:white;
+    font-size: 10px;
+    font-family: 'Saira', sans-serif;
+    text-align: center;
+    padding: 20px 20px;
+}
