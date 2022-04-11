@@ -1,5 +1,5 @@
 ## CarManagement-SimpleCMS
-<p align="center"><a href="https://ibb.co/v1vv9qx"><img src="https://i.ibb.co/XXkkHLZ/Simple-CMS-car-List.png" alt="Simple-CMS-car-List" border="0"></a></p>
+<p align="center"><img src="https://i.ibb.co/XXkkHLZ/Simple-CMS-car-List.png" alt="Simple-CMS-car-List" border="0"></p>
 
 
 ## Overview
